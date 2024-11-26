@@ -20,7 +20,11 @@ export default function Home() {
           <Button url="/portfolio" name="See Our Works" />
         </div>
         <div className="w-1/2">
-          <Image src={heroImg} alt="hero-image" className="w-full h-full" />
+          <Image
+            src={heroImg}
+            alt="hero-image"
+            className={`w-full h-full object-contain ${styles.heroImage}`}
+          />
         </div>
       </div>
     </>
