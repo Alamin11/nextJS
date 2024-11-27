@@ -1,20 +1,22 @@
 import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
-import aboutImg from "../../../public/Meeting-bro.png";
+import aboutImg from "../../../public/about.jpg";
 import Button from "@/components/primary-button/Button";
 const About = () => {
   return (
     <>
       <div className="">
-        <div className="w-full  relative  border border-rose-500">
+        <div className="w-full relative">
           <Image
             src={aboutImg}
             alt="meeting image"
-            className="object-cover grayscale border-red h-[20rem]"
+            className="object-cover grayscale h-[20rem]"
           />
-          <div className="absolute bottom-[20px] left-[20px] bg-green-300 p-1 text-white backdrop-blur-md">
-            <h1 className="font-bold text-xl">Digital StroyTeller</h1>
+          <div className="absolute bottom-[20px] left-[20px] bg-green-400 p-1 text-white backdrop-blur-md rounded-lg">
+            <h1 className="font-bold text-xl text-white">
+              Digital StroyTeller
+            </h1>
             <h2 className="text-lg font-semibold">
               Handcrafting award wining digital experiences
             </h2>
@@ -24,36 +26,36 @@ const About = () => {
           <div className="">
             <h1 className="font-bold text-2xl">Who are we ?</h1>
             <p className="text-base py-3">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum,
-              eum corporis. Laudantium laboriosam tempore rerum est dolor,
-              pariatur numquam recusandae!
+              We use digital tools like videos, social media, podcasts, and
+              interactive media to craft and share engaging narratives.
               <br />
               <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              ea nobis iste voluptatibus dolor tempora natus eaque hic corporis
-              maiores!
-              <br /> <br />
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima,
-              sed?
+              We blend text, visuals, sound, and technology to create immersive
+              experiences, often leveraging platforms like YouTube, Instagram,
+              or blogs to reach diverse audiences and connect through
+              compelling, multimedia storytelling.
+              <br /> <br />A digital storyteller combines creativity and
+              technology to create engaging narratives.
             </p>
           </div>
 
           <div className="">
-            <h1 className="font-bold text-2xl">Who are we ?</h1>
+            <h1 className="font-bold text-2xl">What do we do?</h1>
             <p className="text-base py-3">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum,
-              eum corporis. Laudantium laboriosam tempore rerum est dolor,
-              pariatur numquam recusandae!
+              We, the digital storyteller, crafts narratives using digital
+              platforms and multimedia tools. Our tasks include: Creating
+              Content, Editing Media, Engaging Audiences, Adapting to Trends,
+              Brand Narratives, Interactive Elements
               <br />
               <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              ea nobis iste voluptatibus dolor tempora natus eaque hic corporis
-              maiores!
+              We do these by producing videos, blogs, podcasts to tell a story
+              combining text, images, audio, and video for cohesive
+              storytelling.
               <br /> <br />
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima,
-              sed?
+              We connect with audiences by weaving relatable, memorable, and
+              impactful narratives digitally.
             </p>
-            <Button url="contact" name="Contact us" />
+            <Button url="contact" name="Contact Us" />
           </div>
         </div>
       </div>

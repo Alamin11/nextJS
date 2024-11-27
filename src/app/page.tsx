@@ -11,11 +11,11 @@ export default function Home() {
           <h1
             className={`text-7xl font-semibold bg-gradient-to-b from-green-400 to-gray-50 bg-clip-text text-transparent `}
           >
-            Lorem ipsum dolor sit amet
+            Ambition fuels vision, opens thousand doors
           </h1>
           <p className="text-2xl font-semibold">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            velit soluta quasi enim deleniti!
+            Passion fuels perseverance; dreams inspire purpose and meaningful
+            action.
           </p>
           <Button url="/portfolio" name="See Our Works" />
         </div>
