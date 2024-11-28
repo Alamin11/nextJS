@@ -10,7 +10,10 @@ import styles from "./page.module.css";
 const Blog = () => {
   return (
     <div className="flex flex-col gap-10 pt-14 pb-20">
-      <Link href={"blog/testid"} className="flex gap-10 items-center">
+      <Link
+        href={"blog/testid"}
+        className="flex flex-col md:flex-row gap-10 items-center"
+      >
         <div>
           <Image
             src={blogImg1}
@@ -31,7 +34,10 @@ const Blog = () => {
           </p>
         </div>
       </Link>
-      <Link href={"/testid"} className="flex gap-10 items-center">
+      <Link
+        href={"blog/testid"}
+        className="flex flex-col md:flex-row gap-10 items-center"
+      >
         <div>
           <Image
             src={blogImg2}
@@ -50,7 +56,10 @@ const Blog = () => {
           </p>
         </div>
       </Link>
-      <Link href={"/testid"} className="flex gap-10 items-center">
+      <Link
+        href={"blog/testid"}
+        className="flex flex-col md:flex-row gap-10 items-center"
+      >
         <div>
           <Image
             src={blogImg3}
@@ -69,7 +78,10 @@ const Blog = () => {
           </p>
         </div>
       </Link>
-      <Link href={"/testid"} className="flex gap-10 items-center">
+      <Link
+        href={"/testid"}
+        className="flex flex-col md:flex-row gap-10 items-center"
+      >
         <div>
           <Image
             src={blogImg4}

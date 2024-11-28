@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="container">
+        <div className="container px-8 md:px-14">
           <Navbar />
           {children}
           <Footer />

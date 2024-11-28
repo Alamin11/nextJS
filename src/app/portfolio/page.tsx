@@ -9,7 +9,7 @@ const Portfolio = () => {
   return (
     <>
       <div>
-        <div className="flex gap-12 justify-center my-12">
+        <div className="flex flex-col items-center md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3  gap-12 justify-center my-12">
           <Link
             href={"/portfolio/illustrations"}
             style={{ backgroundImage: `url(${bg1.src})` }}

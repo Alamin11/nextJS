@@ -13,7 +13,7 @@ const About = () => {
             alt="meeting image"
             className="object-cover grayscale h-[20rem]"
           />
-          <div className="absolute bottom-[20px] left-[20px] bg-green-400 p-1 text-white backdrop-blur-md rounded-lg">
+          <div className="md:absolute md:bottom-[20px] md:left-[20px] bg-green-400 p-2 text-white backdrop-blur-md rounded-lg">
             <h1 className="font-bold text-xl text-white">
               Digital StroyTeller
             </h1>
@@ -22,7 +22,7 @@ const About = () => {
             </h2>
           </div>
         </div>
-        <div className="my-10 flex gap-10">
+        <div className="my-10 flex flex-col md:flex-row gap-10">
           <div className="">
             <h1 className="font-bold text-2xl">Who are we ?</h1>
             <p className="text-base py-3">

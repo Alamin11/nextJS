@@ -11,10 +11,12 @@ const Category = ({ params }: { params: any }) => {
   return (
     <>
       <div>
-        <h1 className="capitalize text-3xl font-semibold text-green-400 my-4">
+        <h1 className="capitalize text-3xl font-semibold text-green-400 my-4 text-center">
           {params.category}
         </h1>
-        <div className={`flex gap-10 mt-24 mb-18 items-center ${styles.item}`}>
+        <div
+          className={`flex flex-col md:flex-row gap-10 mt-24 mb-18 items-center ${styles.item}`}
+        >
           <div className="flex-1 flex flex-col justify-center gap-10">
             <h1 className="text-3xl font-semibold">
               Social Welfare Illustration
@@ -35,7 +37,9 @@ const Category = ({ params }: { params: any }) => {
             />
           </div>
         </div>
-        <div className={`flex gap-10 mt-14 mb-8 items-center ${styles.item}`}>
+        <div
+          className={`flex flex-col md:flex-row gap-10 mt-14 mb-8 items-center ${styles.item}`}
+        >
           <div className="flex-1 flex flex-col justify-center gap-10">
             <h1 className="text-3xl font-semibold">Abstract Illustration</h1>
             <p className="text-lg">
@@ -54,7 +58,9 @@ const Category = ({ params }: { params: any }) => {
             />
           </div>
         </div>
-        <div className={`flex gap-10 mt-14 mb-8 items-center ${styles.item}`}>
+        <div
+          className={`flex flex-col md:flex-row gap-10 mt-14 mb-8 items-center ${styles.item}`}
+        >
           <div className="flex-1 flex flex-col justify-center gap-10">
             <h1 className="text-3xl font-semibold">Portfolio Website Design</h1>
             <p className="text-lg">
