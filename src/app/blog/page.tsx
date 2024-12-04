@@ -6,34 +6,48 @@ import blogImg2 from "../../../public/blog-img2.png";
 import blogImg3 from "../../../public/blog-img3.png";
 import blogImg4 from "../../../public/blog-img4.png";
 
-import styles from "./page.module.css";
-const Blog = () => {
+async function getData() {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`, {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
+
+const Blog = async () => {
+  // let data = await fetch("https://jsonplaceholder.typicode.com/posts");
+  // let posts = await data.json();
+  const data = await getData();
+  // console.log(data);
+
   return (
     <div className="flex flex-col gap-10 pt-14 pb-20">
-      <Link
-        href={"blog/testid"}
-        className="flex flex-col md:flex-row gap-10 items-center"
-      >
-        <div>
-          <Image
-            src={blogImg1}
-            alt="social media"
-            className="max-w-[220px] min-h-[220px] object-contain"
-          />
-        </div>
+      {data?.map((item: { id: number; title: string }) => (
+        <Link
+          href={`blog/${item.id}`}
+          key={item.id}
+          className="flex flex-col md:flex-row gap-10 items-center"
+        >
+          <div>
+            <Image
+              src={blogImg1}
+              alt="social media"
+              className="max-w-[220px] min-h-[220px] object-contain"
+            />
+          </div>
 
-        <div>
-          <h1 className="text-5xl font-semibold py-4">Social Media</h1>
-          <p className="text-lg">
-            Merits: Enhances connectivity, promotes businesses, spreads
-            awareness, and fosters creativity.
-            <br />
-            Demerits: Encourages misinformation, addiction, privacy issues, and
-            negatively impacts mental health due to overexposure or
-            cyberbullying.
-          </p>
-        </div>
-      </Link>
+          <div>
+            <h1 className="text-5xl font-semibold py-4">{item.title}</h1>
+            <p className="text-lg">
+              Merits: Enhances connectivity, promotes businesses, spreads
+              awareness, and fosters creativity.
+              <br />
+            </p>
+          </div>
+        </Link>
+      ))}
       <Link
         href={"blog/testid"}
         className="flex flex-col md:flex-row gap-10 items-center"
