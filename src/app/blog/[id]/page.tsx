@@ -6,8 +6,8 @@ import socialMedia from "../../../../public/social-media.jpg";
 import { notFound, useParams } from "next/navigation";
 //import Error from "next/error";
 
-async function getData({ id }: { id: string }) {
-  console.log();
+async function getData(id: any) {
+  // console.log();
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
     cache: "no-store",
   });
@@ -17,23 +17,22 @@ async function getData({ id }: { id: string }) {
   return res.json();
 }
 
-const BlogPost = async (props: { params: Promise<{ id: string }> }) => {
-  const params = await props.params;
-  console.log(params.id);
-
-  const data = await getData(params.id);
+const BlogPost = async ({ params }: { params: any }) => {
+  const { postId } = params;
+  const postData = await getData(postId);
 
   return (
     <div>
       <div className="md:flex items-center justify-center gap-10 pb-10">
         <div className="flex-1">
-          <h1 className="text-5xl font-bold">{data.title}</h1>
-          <p className="text-lg py-10">
+          <h1 className="text-5xl font-bold">{postData.title}</h1>
+          {/* <p className="text-lg py-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A id
             recusandae modi earum dolores soluta nisi perspiciatis, iste
             distinctio nemo consequuntur sed, et placeat qui? Enim temporibus
             quam velit sequi.
-          </p>
+          </p> */}
+          <p className="text-xl">{postData.body}</p>
           <div className="flex items-center gap-4">
             <Image
               src={person1}
@@ -50,25 +49,6 @@ const BlogPost = async (props: { params: Promise<{ id: string }> }) => {
             className="w-full h-[240px] rounded-lg"
           />
         </div>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eius
-          excepturi tempora voluptate iste modi veritatis consequatur recusandae
-          nesciunt perferendis? Ducimus dolorem dolor, esse officiis eligendi
-          ratione saepe magnam assumenda.
-          <br />
-          <br />
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
-          pariatur repudiandae quod!
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-          obcaecati saepe sunt sint ipsam rem praesentium non iusto. Nesciunt
-          et, vel tenetur velit corrupti aliquam corporis sequi dolorem unde
-          consequatur quam similique ullam, dolor quis tempore cum veritatis
-          iure minus.
-        </p>
       </div>
     </div>
   );
