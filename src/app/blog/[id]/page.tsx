@@ -26,12 +26,12 @@ const BlogPost = async ({ params }: { params: any }) => {
       <div className="md:flex items-center justify-center gap-10 pb-10">
         <div className="flex-1">
           <h1 className="text-5xl font-bold">{postData.title}</h1>
-          {/* <p className="text-lg py-10">
+          <p className="text-lg py-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A id
             recusandae modi earum dolores soluta nisi perspiciatis, iste
             distinctio nemo consequuntur sed, et placeat qui? Enim temporibus
             quam velit sequi.
-          </p> */}
+          </p>
           <p className="text-xl">{postData.body}</p>
           <div className="flex items-center gap-4">
             <Image
