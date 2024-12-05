@@ -32,6 +32,12 @@ const BlogPost = async ({ params }: { params: any }) => {
             distinctio nemo consequuntur sed, et placeat qui? Enim temporibus
             quam velit sequi.
           </p>
+          <p className="text-lg py-10">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A id
+            recusandae modi earum dolores soluta nisi perspiciatis, iste
+            distinctio nemo consequuntur sed, et placeat qui? Enim temporibus
+            quam velit sequi.
+          </p>
           <p className="text-xl">{postData.body}</p>
           <div className="flex items-center gap-4">
             <Image
